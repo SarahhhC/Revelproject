@@ -1,0 +1,36 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<form action='{{url "App.MePostSet"}}' method="post">
+   <table id="table_board" class="writeForm">
+      <colgroup>
+         <col width="150">
+         <col width="80%">
+      </colgroup>
+      <thead>
+         <tr>
+            <th colspan="2">비밀번호 입력하세요</th>
+         </tr>
+      </thead>
+      <tbody>
+         <tr>
+            <td>비밀번호 입력</td>            
+            <td><input type="password" name="password"></td>
+         </tr>   
+         <tr>
+            <td></td>            
+            <td><input type="hidden" name="try" value="check"></td>
+         </tr>   
+      </tbody>
+      <tfoot>
+         <tr>
+            <td colspan="2">
+               <p style="text-align: center;">
+                  <input type="submit" value="전송" />
+                  <input type="button" value="돌아가기" onclick="history.go(-1)" />
+               </p>
+            </td>
+         </tr>
+      </tfoot>
+   </table>   
+</form>
